@@ -13,7 +13,7 @@ void main()
 {
     vec3 N;
     vec2 pointCoord = gl_PointCoord / fs_in.ViewDepth;
-    N.xy = pointCoord * 2.0f - 1.0f;
+    N.xy = gl_PointCoord * 2.0f - 1.0f;
     float r2 = dot(N.xy, N.xy);
     if (r2 > 1.0f) discard;
     N.z = sqrt(1.0f - r2);

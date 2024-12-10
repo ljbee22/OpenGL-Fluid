@@ -31,7 +31,11 @@ public:
         std::mt19937 mt(rd());
         std::uniform_real_distribution<float> dist(0, 1);
         
+<<<<<<< Updated upstream
         const float resolution = 0.5;
+=======
+        const float resolution = 0.7;
+>>>>>>> Stashed changes
         const float initialSize = 7;
         for (float x = -initialSize/2; x <= initialSize/2; x+= resolution) {
             for (float y = -initialSize/2; y<= initialSize/2; y+= resolution) {

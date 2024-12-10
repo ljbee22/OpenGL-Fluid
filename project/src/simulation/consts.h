@@ -5,6 +5,7 @@
 #include <glm/gtx/norm.hpp>
 #include <vector>
 
+<<<<<<< Updated upstream
 constexpr double PI = 3.14159265358979;
 constexpr float KERNEL_DISTANCE = 1.0;
 constexpr float SQR_KERNEL_DISTANCE = KERNEL_DISTANCE * KERNEL_DISTANCE;
@@ -12,6 +13,14 @@ constexpr float HEX_KERNEL_DISTANCE = SQR_KERNEL_DISTANCE * SQR_KERNEL_DISTANCE 
 constexpr float KERNEL_FACTOR = 315.0 / 64.0 / PI / HEX_KERNEL_DISTANCE;
 constexpr float LAP_FACTOR = 45.0 / PI / HEX_KERNEL_DISTANCE;
 constexpr float GRAD_FACTOR = -45.0 / PI / HEX_KERNEL_DISTANCE;
+=======
+const double PI = 3.14159265358979;
+const float KERNEL_DISTANCE = 1;
+const float SQR_KERNEL_DISTANCE = KERNEL_DISTANCE * KERNEL_DISTANCE;
+const float KERNEL_FACTOR = 315.0 / 64.0 / PI / pow(KERNEL_DISTANCE, 6);
+const float LAP_FACTOR = 45.0 / PI / pow(KERNEL_DISTANCE, 6);
+const float GRAD_FACTOR = -45.0 / PI / pow(KERNEL_DISTANCE, 6);
+>>>>>>> Stashed changes
 
 class Consts {
 public:
